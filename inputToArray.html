@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>input to array</title>
+</head>
+<body>
+  <script>
+
+    //this script will prompt for numbers to be entered until user types "done"
+    //script will store the input in an array
+
+    //initialize variables
+
+    var inputNumbers = [];
+    var inputString;
+
+    //while loop
+
+    while (inputString != "done"){
+
+      //prompt for input
+      inputString = prompt("Please enter a number or type 'done' when you are finished.");
+
+      //turn the input string into a numneber and put it in the array only if the string is not "done"
+      if (inputString != "done"){
+        inputNumbers.push(Number(inputString));
+
+      }
+    }
+
+    //print out the array
+    for(number of inputNumbers){
+      document.write(number + "<br />")
+    }
+
+
+
+  </script>
+</body>
+</html>
