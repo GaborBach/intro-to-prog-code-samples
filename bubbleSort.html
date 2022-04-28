@@ -10,19 +10,29 @@
 
 <body>
   <script>
+    //This script uses an optimized bubble sort. 
+    //It also uses 'let' instead of 'var' to introduce scope.
+
     // bubbleSort function. This has to be on top.
 
 
     function bubbleSort(arr) {
+
+      //declare variables 'i' and 'j' using 'let', so they are only available inside the function
       let i, j;
+
+      //initalize variable 'len'. It stores the lenght of the array 'arr'.
       let len = arr.length;
 
+      //initialize a boolean 'isSwapped'
       let isSwapped = false;
 
+      //loop through the array
       for (i = 0; i < len; i++) {
 
         isSwapped = false;
 
+        //go through element by element and swap them if the first one is less than the second one
         for (j = 0; j < len; j++) {
           if (arr[j] > arr[j + 1]) {
             var temp = arr[j]
@@ -32,30 +42,36 @@
           }
         }
 
-        // IF no two elements were swapped by inner loop, then break 
-
+        // if no two elements were swapped by inner loop, then break out of inner loop.
         if (!isSwapped) {
           break;
         }
       }
 
+      //return the array after the forting loops are done.
       return arr;
     }
 
 
 
+    //****** program starts here ******
 
-    var inputNumbers = [5, 6, 2, 1, 8, 9];
 
+    //initialize inputNumbers array with numbers out of order
+    let inputNumbers = [5, 6, 2, 1, 8, 9];
+
+
+    //print out the unsorted array
     document.write("<br />Unsorted array:<br />");
 
     for (number of inputNumbers) {
       document.write(number + "<br />");
     }
 
+    //run the sorting function bubbleSort() (see on top)
     inputNumbers = bubbleSort(inputNumbers);
 
-    //print out the array
+    //print out the sorted array
     document.write("<br />Sorted array:<br />");
     for (number of inputNumbers) {
       document.write(number + "<br />")
