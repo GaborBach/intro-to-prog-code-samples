@@ -31,7 +31,23 @@
       }
     }
 
-    //print out the array
+    //print out the array with for (number=0; number <= inputNumbers.length; number++" 
+    document.write("<br />---------<br />print out the array with for (number=0; number <= inputNumbers.length; number++<br />");
+
+    for (number=0; number <= inputNumbers.length-1; number ++){
+      document.write(inputNumbers[number] + "<br />");
+    }
+
+    //print out every other element of the array with for (number=0; number <= inputNumbers.length; number +=2" 
+    document.write("<br />---------<br />print out every other element of the array with for (number=0; number <= inputNumbers.length; number +=2<br />");
+
+for (number=0; number <= inputNumbers.length-1; number +=2){
+  document.write(inputNumbers[number] + "<br />");
+}
+
+    document.write("<br />---------<br />print out the array with for(number of inputNumbers)<br />");
+
+    //print out the array with for(number of inputNumbers)
     for(number of inputNumbers){
       document.write(number + "<br />")
     }
